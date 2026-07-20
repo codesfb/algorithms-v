@@ -1,4 +1,7 @@
 import Dropdown from "../DropDown/DropDown.tsx";
+import Menu from "../Modal/ArrayModal/Menu";
+import RandomForm from "../Modal/ArrayModal/RandomForm";
+import PersonalizedForm from "../Modal/ArrayModal/PersonalizedForm";
 import { Settings } from "lucide-react";
 import { useState } from "react";
 import Modal from "../Modal/Modal.tsx";
@@ -18,8 +21,9 @@ function Navbar({ drawerOpen, onSettingsClick }: NavbarProps) {
     setIsModalOpen(true);
   }
 
+  type Step = "menu" | "random" | "personalized";
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [step, setStep] = useState<Step>("menu");
   return (
     <nav className="bg-background border-b border-surface ">
       <div className="flex justify-between px-8 h-16 items-center">
@@ -41,6 +45,16 @@ function Navbar({ drawerOpen, onSettingsClick }: NavbarProps) {
 
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
           <h2>{selectedAlgorithm}</h2>
+          {step === "menu" && (
+            <Menu
+              onRandom={() => setStep("random")}
+              onPersonalized={() => setStep("personalized")}
+            />
+          )}
+
+          {step === "personalized" && <PersonalizedForm />}
+
+          {step === "random" && <RandomForm />}
         </Modal>
 
         <div

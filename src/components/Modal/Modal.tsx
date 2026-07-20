@@ -1,5 +1,3 @@
-import Button from "../Button/Button.tsx";
-
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
@@ -17,11 +15,6 @@ function Modal({ isOpen, onClose, children }: ModalProps) {
         </button>
 
         {children}
-
-        <div className="flex gap-4">
-          <Button text="Random Array" color="bg-pink" />
-          <Button text="Personalized Array" color="bg-orange" />
-        </div>
       </div>
     </div>
   );
