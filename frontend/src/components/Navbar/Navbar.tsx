@@ -1,7 +1,7 @@
 import Dropdown from "../DropDown/DropDown.tsx";
-import Menu from "../Modal/ArrayModal/Menu";
-import RandomForm from "../Modal/ArrayModal/RandomForm";
-import PersonalizedForm from "../Modal/ArrayModal/PersonalizedForm";
+import Menu from "../Modal/ArrayModal/Menu.ts";
+import RandomForm from "../Modal/ArrayModal/RandomForm.ts";
+import PersonalizedForm from "../Modal/ArrayModal/PersonalizedForm.ts";
 import { Settings } from "lucide-react";
 import { useState } from "react";
 import Modal from "../Modal/Modal.tsx";

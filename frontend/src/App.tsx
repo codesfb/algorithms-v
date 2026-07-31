@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar.tsx";
 import SettingsDrawer from "./components/SettingsDrawer/SettingsDrawer.tsx";
 import { useState } from "react";
 function App() {
