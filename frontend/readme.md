@@ -1,113 +1,148 @@
 # initial idea 
 
 
-├── public/
+├algorithm-visualizer/
 │
-├── src/
-│   │
-│   ├── assets/
-│   │   ├── icons/
-│   │   ├── images/
-│   │   └── logo.svg
-│   │
-│   ├── algorithms/
-│   │   ├── sorting/
-│   │   │   ├── bubbleSort.ts
-│   │   │   ├── selectionSort.ts
-│   │   │   ├── insertionSort.ts
-│   │   │   ├── mergeSort.ts
-│   │   │   ├── quickSort.ts
-│   │   │   └── heapSort.ts
-│   │   │
-│   │   ├── searching/
-│   │   │   ├── linearSearch.ts
-│   │   │   └── binarySearch.ts
-│   │   │
-│   │   └── graph/
-│   │       ├── bfs.ts
-│   │       ├── dfs.ts
-│   │       ├── dijkstra.ts
-│   │       └── astar.ts
-│   │
-│   ├── structures/
-│   │   ├── Array.ts
-│   │   ├── Stack.ts
-│   │   ├── Queue.ts
-│   │   ├── LinkedList.ts
-│   │   ├── BinaryTree.ts
-│   │   ├── AVLTree.ts
-│   │   ├── Heap.ts
-│   │   └── Graph.ts
-│   │
-│   ├── visualizers/
-│   │   ├── ArrayVisualizer/
-│   │   ├── LinkedListVisualizer/
-│   │   ├── StackVisualizer/
-│   │   ├── QueueVisualizer/
-│   │   ├── TreeVisualizer/
-│   │   ├── HeapVisualizer/
-│   │   └── GraphVisualizer/
-│   │
-│   ├── components/
-│   │   ├── Navbar/
-│   │   ├── Footer/
-│   │   ├── Button/
-│   │   ├── Controls/
-│   │   ├── PlaybackControls/
-│   │   ├── SpeedSlider/
-│   │   ├── StepIndicator/
-│   │   ├── Legend/
-│   │   ├── Tooltip/
-│   │   ├── SettingsDrawer/
-│   │   ├── CodeViewer/
-│   │   ├── Card/
-│   │   ├── Modal/
-│   │   └── Loading/
-│   │
-│   ├── layouts/
-│   │   ├── MainLayout.tsx
-│   │   └── VisualizerLayout.tsx
-│   │
-│   ├── pages/
-│   │   ├── Home/
-│   │   ├── Sorting/
-│   │   ├── Searching/
-│   │   ├── Trees/
-│   │   ├── Graphs/
-│   │   ├── LinkedLists/
-│   │   ├── Stacks/
-│   │   ├── Queues/
-│   │   └── Heaps/
-│   │
-│   ├── hooks/
-│   │   ├── useAnimation.ts
-│   │   ├── usePlayback.ts
-│   │   ├── useKeyboard.ts
-│   │   └── useWindowSize.ts
-│   │
-│   ├── utils/
-│   │   ├── sleep.ts
-│   │   ├── randomArray.ts
-│   │   ├── shuffle.ts
-│   │   ├── swap.ts
-│   │   ├── math.ts
-│   │   └── colors.ts
-│   │
-│   ├── types/
-│   │   ├── animation.ts
-│   │   ├── graph.ts
-│   │   ├── tree.ts
-│   │   └── algorithm.ts
-│   │
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
+├── frontend/
 │
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
-
+│   ├── public/
+│   │
+│   ├── src/
+│   │
+│   │   ├── app/
+│   │   │   ├── App.tsx
+│   │   │   ├── providers.tsx
+│   │   │   └── theme.ts
+│   │   │
+│   │   ├── assets/
+│   │   │   ├── fonts/
+│   │   │   ├── icons/
+│   │   │   ├── images/
+│   │   │   └── svg/
+│   │   │
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   │   ├── EmptyState/
+│   │   │   │   ├── Error/
+│   │   │   │   └── Loading/
+│   │   │   │
+│   │   │   ├── layout/
+│   │   │   │   ├── Footer/
+│   │   │   │   ├── Navbar/
+│   │   │   │   └── Sidebar/
+│   │   │   │
+│   │   │   └── ui/
+│   │   │       ├── Badge/
+│   │   │       ├── Button/
+│   │   │       ├── Card/
+│   │   │       ├── Dropdown/
+│   │   │       ├── Input/
+│   │   │       ├── Modal/
+│   │   │       ├── Select/
+│   │   │       └── Tooltip/
+│   │   │
+│   │   ├── data/
+│   │   │
+│   │   ├── features/
+│   │   │
+│   │   │   ├── algorithms/
+│   │   │   │
+│   │   │   │   ├── components/
+│   │   │   │   ├── hooks/
+│   │   │   │   ├── pages/
+│   │   │   │   ├── services/
+│   │   │   │   ├── types/
+│   │   │   │   ├── utils/
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── data-structures/
+│   │   │   │
+│   │   │   │   ├── components/
+│   │   │   │   ├── hooks/
+│   │   │   │   ├── pages/
+│   │   │   │   ├── services/
+│   │   │   │   ├── types/
+│   │   │   │   ├── utils/
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── visualizer/
+│   │   │   │
+│   │   │   │   ├── animations/
+│   │   │   │   ├── controls/
+│   │   │   │   ├── engine/
+│   │   │   │   ├── render/
+│   │   │   │   ├── components/
+│   │   │   │   ├── hooks/
+│   │   │   │   ├── types/
+│   │   │   │   ├── utils/
+│   │   │   │   └── index.ts
+│   │   │   │
+│   │   │   ├── search/
+│   │   │   │
+│   │   │   └── home/
+│   │   │
+│   │   ├── hooks/
+│   │   │   ├── useDebounce.ts
+│   │   │   ├── useLocalStorage.ts
+│   │   │   ├── useTheme.ts
+│   │   │   └── useWindowSize.ts
+│   │   │
+│   │   ├── layouts/
+│   │   │   ├── MainLayout.tsx
+│   │   │   └── VisualizerLayout.tsx
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Home/
+│   │   │   ├── About/
+│   │   │   ├── NotFound/
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── router/
+│   │   │   ├── routes.tsx
+│   │   │   └── index.tsx
+│   │   │
+│   │   ├── services/
+│   │   │   ├── api.ts
+│   │   │   ├── algorithm.service.ts
+│   │   │   ├── dataStructure.service.ts
+│   │   │   └── user.service.ts
+│   │   │
+│   │   ├── styles/
+│   │   │   ├── globals.css
+│   │   │   ├── animations.css
+│   │   │   └── scrollbar.css
+│   │   │
+│   │   ├── types/
+│   │   │   ├── Algorithm.ts
+│   │   │   ├── Card.ts
+│   │   │   ├── DataStructure.ts
+│   │   │   └── User.ts
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── formatBigO.ts
+│   │   │   ├── randomArray.ts
+│   │   │   ├── sleep.ts
+│   │   │   └── swap.ts
+│   │   │
+│   │   ├── main.tsx
+│   │   └── vite-env.d.ts
+│   │
+│   ├── package.json
+│   └── vite.config.ts
+│
+├── backend/
+│   ├── src/
+│   ├── pom.xml
+│   └── ...
+│
+├── docs/
+│   ├── diagrams/
+│   ├── api/
+│   └── architecture/
+│
+├── docker-compose.yml
+├── README.md
+└── .gitignore
 
 
 
