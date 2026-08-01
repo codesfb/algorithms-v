@@ -1,0 +1,49 @@
+import type { CardProps } from "./Card.types";
+
+export function Card({ title, description, icon }: CardProps) {
+  return (
+    <article
+      className="
+      w-80
+      rounded
+      border 
+
+      border-purple
+      overflow-hidden
+      "
+    >
+      <div
+        className="
+    flex
+    h-40
+    items-center
+    justify-center
+    border-b
+    border-zinc-800"
+      >
+        {icon}
+      </div>
+
+      <div className="space-y-4 p-6">
+        <h2
+          className="
+    text-2xl
+    font-bold
+    text-zinc-50
+  "
+        >
+          {title}
+        </h2>
+
+        <p
+          className="
+    text-zinc-400
+    leading-relaxed
+  "
+        >
+          {description}
+        </p>
+      </div>
+    </article>
+  );
+}
