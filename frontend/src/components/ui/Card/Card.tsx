@@ -1,6 +1,6 @@
 import type { CardProps } from "./Card.types";
 
-export function Card({ title, description, icon }: CardProps) {
+export function Card({ title, description, icon: Icon, href }: CardProps) {
   return (
     <article
       className="
@@ -21,7 +21,7 @@ export function Card({ title, description, icon }: CardProps) {
     border-b
     border-zinc-800"
       >
-        {icon}
+      <Icon className="w-16 h-16" />
       </div>
 
       <div className="space-y-4 p-6">
@@ -43,6 +43,7 @@ export function Card({ title, description, icon }: CardProps) {
         >
           {description}
         </p>
+        <button>{href}</button>
       </div>
     </article>
   );

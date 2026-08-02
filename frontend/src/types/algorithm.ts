@@ -1,8 +1,9 @@
 import type { LucideIcon } from "lucide-react";
 
-export interface CardProps {
+export interface Algorithm {
+  id: number;
   title: string;
   description: string;
-  icon: LucideIcon;
+  logo: LucideIcon;
   href: string;
 }
