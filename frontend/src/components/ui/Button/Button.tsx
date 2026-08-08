@@ -2,6 +2,7 @@ type ButtonFunctions = {
   text: string;
   color: string;
   onClick?: () => void;
+  
 };
 
 function Button({ text, color, onClick }: ButtonFunctions) {
