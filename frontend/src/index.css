@@ -2,30 +2,61 @@
 
 @theme {
   /* Base */
+  --color-background: #1e1e1e;
+  --color-surface: #282828;
+  --color-surface-hover: #303030;
+  --color-surface-active: #383838;
 
-  --color-background: #02000a;
-  --color-surface: #343746;
+  /* Dracula / UI states */
   --color-selection: #44475a;
   --color-current: #6272a4;
+  --color-border: #3a3a3a;
 
   /* Text */
-
   --color-foreground: #f8f8f2;
   --color-text: #f8f8f2;
-  --color-muted: #6272a4;
+  --color-text-secondary: #c5c5c5;
+  --color-muted: #9a9a9a;
+  --color-disabled: #666666;
 
   /* Accent */
-
   --color-primary: #bd93f9;
+  --color-primary-hover: #c9a4ff;
   --color-secondary: #8be9fd;
+  --color-secondary-hover: #a4efff;
 
   /* Semantic */
-
   --color-success: #50fa7b;
+  --color-success-muted: #2d6a3d;
+
   --color-warning: #f1fa8c;
+  --color-warning-muted: #6b6330;
+
   --color-danger: #ff5555;
+  --color-danger-hover: #ff6e6e;
+  --color-danger-muted: #6b3030;
+
+  /* Dracula palette */
   --color-orange: #ffb86c;
   --color-pink: #ff79c6;
   --color-cyan: #8be9fd;
   --color-purple: #bd93f9;
+  --color-green: #50fa7b;
+  --color-yellow: #f1fa8c;
+  --color-red: #ff5555;
+  --color-blue: #6272a4;
+
+  /* Code / algorithm visualization */
+  --color-code-background: #191919;
+  --color-code-surface: #242424;
+  --color-code-border: #383838;
+
+  --color-node: #bd93f9;
+  --color-node-active: #ff79c6;
+  --color-node-visited: #8be9fd;
+  --color-node-success: #50fa7b;
+  --color-node-danger: #ff5555;
+
+  /* Overlay */
+  --color-overlay: #000000;
 }
