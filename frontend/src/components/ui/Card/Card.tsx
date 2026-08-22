@@ -1,5 +1,5 @@
 import type { CardProps } from "./Card.types";
-
+import CardButton from "../Button/CardButton";
 export function Card({ title, description, icon: Icon, href }: CardProps) {
   return (
     <article
@@ -21,7 +21,7 @@ export function Card({ title, description, icon: Icon, href }: CardProps) {
     border-b
     border-zinc-800"
       >
-      <Icon className="w-16 h-16" />
+        <Icon className="w-16 h-16" />
       </div>
 
       <div className="space-y-4 p-6">
@@ -43,7 +43,16 @@ export function Card({ title, description, icon: Icon, href }: CardProps) {
         >
           {description}
         </p>
-        <button>{href}</button>
+      </div>
+      <div
+        className="flex
+    h-14
+    items-centerir
+    justify-end
+    p-2
+        "
+      >
+        <CardButton href={href}></CardButton>
       </div>
     </article>
   );
