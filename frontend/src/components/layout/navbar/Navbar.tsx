@@ -13,8 +13,8 @@ function Navbar({ drawerOpen, onButtonsClick }: NavbarProps) {
         <div className="text-primary">Logo</div>
 
         <div className="flex items-center gap-4">
-          <Button text="Algorithms" onClick={onButtonsClick}></Button>
           <Button text="Data strunctures" onClick={onButtonsClick}></Button>
+          <Button text="Algorithms" onClick={onButtonsClick}></Button>
 
           <Settings />
           <span>{drawerOpen ? "Close Settings" : "Settings"} </span>
