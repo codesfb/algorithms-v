@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 48" role="img" aria-labelledby="title desc">
+  <title id="title">algorithms v</title>
+  <desc id="desc">Logo do Algorithms V com um cilindro de laboratório, líquido colorido e Big O</desc>
+  <defs>
+    <linearGradient id="liquid" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#bd93f9"/>
+      <stop offset="1" stop-color="#8be9fd"/>
+    </linearGradient>
+    <clipPath id="cylinder">
+      <rect x="12" y="6" width="35" height="36" rx="5"/>
+    </clipPath>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g clip-path="url(#cylinder)">
+      <rect x="9" y="24" width="41" height="21" fill="url(#liquid)"/>
+      <path d="M9 26c8-4 13 4 21 0s12 3 20-1v20H9Z" fill="#8be9fd" opacity=".7"/>
+    </g>
+    <rect x="12" y="6" width="35" height="36" rx="5" stroke="#bd93f9" stroke-width="2"/>
+    <path d="M17 14h5m-5 6h5m-5 6h5" stroke="#f8f8f2" stroke-width="1.5" opacity=".75"/>
+    <path d="M8 42h43" stroke="#bd93f9" stroke-width="2"/>
+    <circle cx="60" cy="24" r="9" fill="#8be9fd" opacity=".9" stroke="#8be9fd" stroke-width="2"/>
+    <path d="m77 16 14 16m0-16L77 32" stroke="#8be9fd" stroke-width="3"/>
+  </g>
+  <text x="29.5" y="35" fill="#1e1e1e" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="7" font-weight="800" text-anchor="middle">Big O</text>
+  <text x="106" y="31" fill="#f8f8f2" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="23" font-weight="700" letter-spacing="-.6">algorithms <tspan fill="#bd93f9">v</tspan></text>
+</svg>
