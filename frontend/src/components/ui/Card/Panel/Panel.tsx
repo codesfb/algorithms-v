@@ -1,5 +1,5 @@
 function Panel() {
-  return <p>Panel aqui</p>;
+  return <p>Panel here</p>;
 }
 
 export default Panel;

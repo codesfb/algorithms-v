@@ -10,7 +10,7 @@ export function DataStructures() {
       <main className="p-8">
         <h1 className="mb-2 text-3xl font-bold">Data Structures</h1>
         <p className="mb-8 text-text-secondary">
-          Explore visualizações e conceitos fundamentais.
+          Explore visualizations and fundamental concepts.
         </p>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
