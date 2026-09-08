@@ -1,6 +1,6 @@
 type ButtonFunctions = {
-  text: string;
-  color: string;
+  text?: string;
+  color?: string;
   onClick?: () => void;
   
 };

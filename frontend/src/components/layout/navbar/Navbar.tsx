@@ -1,12 +1,12 @@
 import { Settings } from "lucide-react";
 import Button from "../../ui/Button/Button.tsx";
 import { Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 
 type NavbarProps = {
-  drawerOpen: boolean;
-  onSettingsClick: () => void;
-  onButtonsClick: () => void;
+  drawerOpen?: boolean;
+  onSettingsClick?: () => void;
+  onButtonsClick?: () => void;
 };
 
 function Navbar({ drawerOpen, onButtonsClick, onSettingsClick }: NavbarProps) {
@@ -24,8 +24,8 @@ function Navbar({ drawerOpen, onButtonsClick, onSettingsClick }: NavbarProps) {
         </Link>
 
         <div className="flex items-center gap-4">
-          <Button text="Data strunctures" onClick={onButtonsClick}></Button>
-          <Button text="Algorithms" onClick={onButtonsClick}></Button>
+          <NavLink to="/data-structures"><Button text="Data strunctures" ></Button></NavLink>
+          <NavLink to="/algorithms"><Button text="Algorithms" ></Button></NavLink>
 
           <button
             type="button"
