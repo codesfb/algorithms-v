@@ -22,7 +22,7 @@ export function NotFound() {
               <House className="h-4 w-4" /> Go home
             </Link>
             <Link to="/algorithms" className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-5 py-3 font-semibold transition-colors duration-200 hover:border-secondary hover:text-secondary">
-              <Binary className="h-4 w-4" /> Browse algorithms
+              < div className="h-4 w-4" /> Browse algorithms
             </Link>
           </div>
 

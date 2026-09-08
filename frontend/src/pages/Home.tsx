@@ -13,9 +13,8 @@ export function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <main>
-        <section className="grid gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
+        <section className="grid gap-8 px-8 py-12 sm:px-6 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
           <div className="page-enter">
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/35 bg-primary/10 px-4 py-2 font-mono text-xs font-medium text-primary"><Binary className="h-4 w-4" /> Learn by seeing it happen</span>
             <h1 className="mt-6 max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">Algorithms stop being abstract when you can visualize them.</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-text-secondary">Explore algorithms and data structures step by step. Compare costs, understand decisions, and build a solid foundation in computer science.</p>
             <div className="mt-8 flex flex-wrap gap-4">
