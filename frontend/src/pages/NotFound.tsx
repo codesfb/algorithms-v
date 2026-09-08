@@ -11,7 +11,7 @@ export function NotFound() {
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/30 bg-primary/10 text-primary">
             <SearchX className="h-8 w-8" aria-hidden="true" />
           </div>
-          <p className="mt-8 text-sm font-semibold uppercase tracking-[0.3em] text-secondary">Error 404</p>
+          <p className="mt-8 font-mono text-xs font-semibold uppercase tracking-[0.3em] text-secondary">Error 404</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">This path does not exist.</h1>
           <p className="mx-auto mt-5 max-w-lg leading-7 text-text-secondary">
             The page may have moved, or the address may not be quite right. Choose a path below to continue exploring.
