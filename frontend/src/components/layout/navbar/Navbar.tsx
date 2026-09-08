@@ -1,41 +1,15 @@
-import { Settings } from "lucide-react";
-import Button from "../../ui/Button/Button.tsx";
-import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-type NavbarProps = {
-  drawerOpen?: boolean;
-  onSettingsClick?: () => void;
-  onButtonsClick?: () => void;
-};
-
-function Navbar({ drawerOpen, onButtonsClick, onSettingsClick }: NavbarProps) {
+function Navbar() {
   return (
-    <nav className="bg-background border-b border-surface ">
-      <div className="flex justify-between px-8 h-16 items-center">
-        <Link to="/">
-          <div className="flex items-center gap-3">
-          <img
-            src="/algorithms-v.svg"
-            alt="algorithms v"
-            className="h-9 w-auto"
-          />
-        </div>
+    <nav className="border-b border-surface bg-background">
+      <div className="flex h-16 items-center justify-between px-4 sm:px-6">
+        <Link to="/" className="transition-transform duration-200 hover:scale-[1.02]" aria-label="Algorithms V home">
+          <img src="/algorithms-v.svg" alt="algorithms v" className="h-9 w-auto" />
         </Link>
-
-        <div className="flex items-center gap-4">
-          <NavLink to="/data-structures"><Button text="Data strunctures" ></Button></NavLink>
-          <NavLink to="/algorithms"><Button text="Algorithms" ></Button></NavLink>
-
-          <button
-            type="button"
-            onClick={onSettingsClick}
-            className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
-            aria-label={drawerOpen ? "Close Settings" : "Open Settings"}
-          >
-            <Settings className="h-5 w-5" />
-            <span>{drawerOpen ? "Close Settings" : "Settings"}</span>
-          </button>
+        <div className="flex items-center gap-5 sm:gap-7">
+          <NavLink to="/data-structures" className={({ isActive }) => `nav-link ${isActive ? "nav-link-active" : ""}`}>Data structures</NavLink>
+          <NavLink to="/algorithms" className={({ isActive }) => `nav-link ${isActive ? "nav-link-active" : ""}`}>Algorithms</NavLink>
         </div>
       </div>
     </nav>

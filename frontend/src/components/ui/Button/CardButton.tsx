@@ -13,7 +13,7 @@ const CardButton = ({ href }: CardButtonProps) => {
         inline-flex items-center justify-center
         px-6 py-3
         bg-primary
-        text-primary-foreground
+        text-background
         font-semibold
         rounded-lg
         shadow-md
@@ -25,6 +25,7 @@ const CardButton = ({ href }: CardButtonProps) => {
         active:scale-95
         transition-all duration-200
       "
+      aria-label="Open content"
     >
       <MoveRight size={20} />
     </Link>

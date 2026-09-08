@@ -2,57 +2,16 @@ import type { CardProps } from "./Card.types";
 import CardButton from "../Button/CardButton";
 export function Card({ title, description, icon: Icon, href }: CardProps) {
   return (
-    <article
-      className="
-      w-80
-      rounded
-      border 
-
-      border-purple
-      overflow-hidden
-      "
-    >
-      <div
-        className="
-    flex
-    h-40
-    items-center
-    justify-center
-    border-b
-    border-zinc-800"
-      >
-        <Icon className="w-16 h-16" />
+    <article className="card-enter w-full max-w-80 overflow-hidden rounded border border-purple transition-transform duration-200 hover:-translate-y-0.5">
+      <div className="flex h-40 items-center justify-center border-b border-zinc-800">
+        <Icon className="h-16 w-16" />
       </div>
-
       <div className="space-y-4 p-6">
-        <h2
-          className="
-    text-2xl
-    font-bold
-    text-zinc-50
-  "
-        >
-          {title}
-        </h2>
-
-        <p
-          className="
-    text-zinc-400
-    leading-relaxed
-  "
-        >
-          {description}
-        </p>
+        <h2 className="text-2xl font-bold text-zinc-50">{title}</h2>
+        <p className="leading-relaxed text-zinc-400">{description}</p>
       </div>
-      <div
-        className="flex
-    h-14
-    items-centerir
-    justify-end
-    p-2
-        "
-      >
-        <CardButton href={href}></CardButton>
+      <div className="flex h-14 items-center justify-end p-2">
+        <CardButton href={href} />
       </div>
     </article>
   );

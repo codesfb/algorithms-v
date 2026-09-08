@@ -7,13 +7,15 @@ export function DataStructures() {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
-      <main className="p-8">
-        <h1 className="mb-2 text-3xl font-bold">Data Structures</h1>
-        <p className="mb-8 text-text-secondary">
+      <main className="px-4 py-10 sm:px-6">
+        <div className="page-enter">
+          <p className="text-sm font-semibold uppercase tracking-widest text-secondary">Explore</p>
+          <h1 className="mt-2 text-3xl font-bold sm:text-4xl">Data Structures</h1>
+        <p className="mt-3 max-w-2xl text-text-secondary">
           Explore visualizations and fundamental concepts.
         </p>
-
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        </div>
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {data_structures.map((algorithm) => (
             <Card key={algorithm.id}
                 title={algorithm.title}
