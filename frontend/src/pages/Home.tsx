@@ -1,4 +1,4 @@
-import { ArrowRight, Binary, Boxes, ChartNoAxesCombined, Network } from "lucide-react";
+import { ArrowRight, Boxes, ChartNoAxesCombined, Network } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/layout/navbar/Navbar";

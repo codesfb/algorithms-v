@@ -1,4 +1,4 @@
-import { ArrowLeft, Binary, House, SearchX } from "lucide-react";
+import { ArrowLeft, House, SearchX } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/layout/navbar/Navbar";
 
@@ -22,7 +22,7 @@ export function NotFound() {
               <House className="h-4 w-4" /> Go home
             </Link>
             <Link to="/algorithms" className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-5 py-3 font-semibold transition-colors duration-200 hover:border-secondary hover:text-secondary">
-              < div className="h-4 w-4" /> Browse algorithms
+              Browse algorithms
             </Link>
           </div>
 

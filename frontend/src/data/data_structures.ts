@@ -7,10 +7,10 @@ import { ArrowUpDown, GitBranch } from "lucide-react";
 export const data_structures: dataStructure[] = [
   {
     id: 1,
-    title: "stack",
-    description: "stack one  above another",
+    title: "Stack",
+    description: "Explore the LIFO structure: the last item in is the first item out.",
     logo: ArrowUpDown,
-    href: "/data_structures/stack",
+    href: "/data-structures/stack",
   },
   {
     id: 2,
