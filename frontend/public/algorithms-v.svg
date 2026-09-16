@@ -1,26 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 48" role="img" aria-labelledby="title desc">
-  <title id="title">algorithms v</title>
-  <desc id="desc">Algorithms V logo with a laboratory cylinder, colorful liquid, and Big O</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title desc">
+  <title id="title">Bequer algorithms-v</title>
+  <desc id="desc">Minimal beaker with centimeter markings, colorful liquid, and O(n log n)</desc>
   <defs>
     <linearGradient id="liquid" x1="0" x2="1" y1="0" y2="1">
-      <stop stop-color="#bd93f9"/>
-      <stop offset="1" stop-color="#8be9fd"/>
+      <stop stop-color="#c9a4ff"/>
+      <stop offset="1" stop-color="#8f63d8"/>
     </linearGradient>
-    <clipPath id="cylinder">
-      <rect x="12" y="6" width="35" height="36" rx="5"/>
+    <clipPath id="beaker">
+      <path d="M8 14h34v22c0 4-3 7-7 7H14c-4 0-7-3-7-7V14Z"/>
     </clipPath>
   </defs>
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <g clip-path="url(#cylinder)">
-      <rect x="9" y="24" width="41" height="21" fill="url(#liquid)"/>
-      <path d="M9 26c8-4 13 4 21 0s12 3 20-1v20H9Z" fill="#8be9fd" opacity=".7"/>
+  <g transform="translate(1 -1) rotate(-8 24 25)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g clip-path="url(#beaker)">
+      <path d="M7 27h34v9c0 4-3 7-7 7H14c-4 0-7-3-7-7v-9Z" fill="url(#liquid)" class="logo-liquid"/>
+      <path d="M8 27c8 2.5 20 2.5 32 0" stroke="#e1d0ff" stroke-width="1.5" class="logo-wave"/>
     </g>
-    <rect x="12" y="6" width="35" height="36" rx="5" stroke="#bd93f9" stroke-width="2"/>
-    <path d="M17 14h5m-5 6h5m-5 6h5" stroke="#f8f8f2" stroke-width="1.5" opacity=".75"/>
-    <path d="M8 42h43" stroke="#bd93f9" stroke-width="2"/>
-    <circle cx="60" cy="24" r="9" fill="#8be9fd" opacity=".9" stroke="#8be9fd" stroke-width="2"/>
-    <path d="m77 16 14 16m0-16L77 32" stroke="#8be9fd" stroke-width="3"/>
+    <path d="M5 9h38M10 9v27c0 4 3 7 7 7h12c4 0 7-3 7-7V9" stroke="#f8f8f2" stroke-width="3.5"/>
+    <g stroke="#f8f8f2" stroke-width="1">
+      <path d="M29 16h6M31 21h4M29 26h6M31 31h4"/>
+    </g>
+    <text x="34" y="13" fill="#f8f8f2" stroke="none" font-family="Space Grotesk, sans-serif" font-size="3.2" font-weight="600" text-anchor="middle">cm</text>
+    <text x="24" y="36" fill="#f8f8f2" stroke="none" font-family="Space Grotesk, sans-serif" font-size="5.5" font-weight="700" text-anchor="middle">O(n log n)</text>
+    <circle cx="16" cy="32" r="1.4" fill="#f8f8f2" stroke="none" class="logo-bubble logo-bubble-one"/>
+    <circle cx="32" cy="35" r="1.1" fill="#f8f8f2" stroke="none" class="logo-bubble logo-bubble-two"/>
   </g>
-  <text x="29.5" y="35" fill="#1e1e1e" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="7" font-weight="800" text-anchor="middle">Big O</text>
-  <text x="106" y="31" fill="#f8f8f2" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="23" font-weight="700" letter-spacing="-.6">algorithms <tspan fill="#bd93f9">v</tspan></text>
+  <style>
+    .logo-liquid { transform-origin: 22px 32px; animation: liquid-rise 2.8s ease-in-out infinite; }
+    .logo-wave { animation: wave 2.8s ease-in-out infinite; }
+    .logo-bubble { animation: bubble 2.8s ease-in-out infinite; }
+    .logo-bubble-two { animation-delay: 700ms; }
+    @keyframes liquid-rise { 0%, 100% { transform: translateY(1px); } 50% { transform: translateY(-1px); } }
+    @keyframes wave { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(1px); } }
+    @keyframes bubble { 0%, 100% { opacity: .25; transform: translateY(2px); } 45%, 65% { opacity: 1; transform: translateY(-4px); } }
+    @media (prefers-reduced-motion: reduce) {
+      .logo-liquid, .logo-wave, .logo-bubble { animation: none; }
+    }
+  </style>
 </svg>

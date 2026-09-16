@@ -1,11 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
-
+import LogoBequer from "@/components/common/LogoBequer";
 function Navbar() {
   return (
     <nav className="border-b border-surface bg-background">
       <div className="flex h-16 items-center justify-between px-4 sm:px-6">
         <Link to="/" className="transition-transform duration-200 hover:scale-[1.02]" aria-label="Algorithms V home">
-          <img src="/algorithms-v.svg" alt="algorithms v" className="h-9 w-auto" />
+          <LogoBequer width={186} height={36} aria-hidden="true" />
         </Link>
         <div className="flex items-center gap-5 sm:gap-7">
           <NavLink to="/data-structures" className={({ isActive }) => `nav-link ${isActive ? "nav-link-active" : ""}`}>Data structures</NavLink>
