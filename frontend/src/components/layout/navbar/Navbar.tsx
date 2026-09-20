@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import LogoBequer from "@/components/common/LogoBequer";
 function Navbar() {
   return (
-    <nav className="border-b border-surface bg-background">
+    <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-surface bg-background/80">
       <div className="flex h-16 items-center justify-between px-4 sm:px-6">
         <Link to="/" className="transition-transform duration-200 hover:scale-[1.02]" aria-label="Algorithms V home">
           <LogoBequer width={186} height={36} aria-hidden="true" />
