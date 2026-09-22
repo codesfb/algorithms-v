@@ -13,7 +13,7 @@ type ConfigurationPanelProps = {
 
 export function ConfigurationPanel({ value, onChange, onReset }: ConfigurationPanelProps) {
   return (
-    <section className="rounded-2xl border border-border bg-surface p-5 shadow-sm">
+    <section className="rounded-2xl border border-border bg-background/80 p-5 shadow-xl backdrop-blur-lg">
       <div className="flex items-center gap-2 text-foreground">
         <Settings2 className="size-4 text-secondary" aria-hidden="true" />
         <h2 className="font-semibold">Configuration</h2>

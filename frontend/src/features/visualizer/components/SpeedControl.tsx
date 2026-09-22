@@ -9,7 +9,7 @@ type SpeedControlProps = {
 
 export function SpeedControl({ value, onChange, min = 1, max = 100 }: SpeedControlProps) {
   return (
-    <section className="rounded-2xl border border-border bg-surface p-5 shadow-sm">
+    <section className="rounded-2xl border border-border bg-background/80 p-5 shadow-xl backdrop-blur-lg">
       <div className="flex items-start justify-between gap-3">
         <div>
           <div className="flex items-center gap-2 text-foreground">
