@@ -3,7 +3,7 @@ import { Home } from "@/pages/Home";
 import { Algorithms } from "@/pages/Algorithms";
 import { DataStructures } from "@/pages/DataStructures";
 import { NotFound } from "@/pages/NotFound";
-import { VisualizerPage } from "@/features/visualizer/VisualizerPage";
+import { SortingVisualizerPage } from "@/features/visualizer/SortingVisualizerPage";
 import { StackVisualizerPage } from "@/features/visualizer/StackVisualizerPage";
 
 
@@ -15,7 +15,7 @@ export function AppRoutes() {
       <Route path="/data-structures" element={<DataStructures />} />
       <Route path="/data-structures/stack" element={<StackVisualizerPage />} />
       <Route path="*" element={<NotFound />} />
-      <Route path="/Visualizer" element={<VisualizerPage/>}/>
+      <Route path="/algorithms/:algorithm" element={<SortingVisualizerPage />} />
     </Routes>
   );
 }

@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-import { ArrowDownToLine, ArrowUpFromLine, ChevronLeft, Cuboid, Play, Plus, RotateCcw, Sparkles } from "lucide-react";
+import { ArrowDownToLine, ArrowUpFromLine, ChevronLeft, Cuboid, Play, Plus, RotateCcw, Sparkles, X } from "lucide-react";
 import Navbar from "@/components/layout/navbar/Navbar";
 
 type Setup = "choose" | "preset" | "custom" | "playing";
@@ -92,20 +92,23 @@ export function StackVisualizerPage() {
       <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 lg:py-12">
         <Link to="/data-structures" className="inline-flex items-center gap-1.5 text-sm font-medium text-text-secondary transition-colors hover:text-secondary"><ChevronLeft className="size-4" /> Data structures</Link>
         <div ref={panelRef} className="mt-6">
-          {setup === "choose" && <ChooseSetup onPreset={() => setSetup("preset")} onCustom={() => { setItems([]); setSetup("custom"); }} />}
-          {setup === "preset" && <PresetSetup onBack={() => setSetup("choose")} onChoose={(values) => start(values)} />}
-          {setup === "custom" && (
-            <CustomSetup items={items} draft={draft} onDraft={setDraft} onAdd={addCustomValue} onRemove={(index) => setItems((current) => current.filter((_, itemIndex) => itemIndex !== index))} onBack={() => setSetup("choose")} onStart={() => start(items)} />
-          )}
-          {setup === "playing" && <StackPlayer items={items} stackRef={stackRef} action={action} lastValue={lastValue} pushValue={pushValue} onPushValue={setPushValue} onPush={push} onPop={pop} onReset={() => setSetup("choose")} />}
+          <StackPlayer items={items} stackRef={stackRef} action={action} lastValue={lastValue} pushValue={pushValue} onPushValue={setPushValue} onPush={push} onPop={pop} onReset={() => setSetup("choose")} />
         </div>
       </main>
+      {setup !== "playing" && <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/55 px-4 py-6 backdrop-blur-sm" role="presentation">
+        <section ref={panelRef} role="dialog" aria-modal="true" aria-labelledby="stack-setup-title" className="relative my-auto max-h-[calc(100vh-3rem)] w-full max-w-3xl overflow-y-auto rounded-3xl border border-border bg-background p-6 shadow-2xl shadow-black/40 sm:p-8">
+          <button type="button" onClick={() => setSetup("playing")} aria-label="Close setup" className="absolute right-5 top-5 rounded-lg p-2 text-muted transition hover:bg-surface-hover hover:text-foreground"><X className="size-5" /></button>
+          {setup === "choose" && <ChooseSetup onPreset={() => setSetup("preset")} onCustom={() => { setItems([]); setSetup("custom"); }} />}
+          {setup === "preset" && <PresetSetup onBack={() => setSetup("choose")} onChoose={(values) => start(values)} />}
+          {setup === "custom" && <CustomSetup items={items} draft={draft} onDraft={setDraft} onAdd={addCustomValue} onRemove={(index) => setItems((current) => current.filter((_, itemIndex) => itemIndex !== index))} onBack={() => setSetup("choose")} onStart={() => start(items)} />}
+        </section>
+      </div>}
     </div>
   );
 }
 
 function Header() {
-  return <div data-reveal><p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">Data structure · LIFO</p><h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">Stack visualizer</h1><p className="mt-4 max-w-2xl leading-relaxed text-text-secondary">In a stack, the last item in is the first item out. Choose how you want to start.</p></div>;
+  return <div data-reveal><p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">Data structure · LIFO</p><h1 id="stack-setup-title" className="mt-3 pr-10 text-3xl font-bold tracking-tight sm:text-4xl">Stack visualizer</h1><p className="mt-3 max-w-2xl leading-relaxed text-text-secondary">In a stack, the last item in is the first item out. Choose how you want to start.</p></div>;
 }
 
 function ChooseSetup({ onPreset, onCustom }: { onPreset: () => void; onCustom: () => void }) {
